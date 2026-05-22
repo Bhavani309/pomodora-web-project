@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>🔥 Pomodoro Pro Max</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- LOGIN -->
+    <div id="login" class="card">
+        <h2>🔐 Login</h2>
+
+        <input id="email" placeholder="Email">
+
+        <input id="pass" type="password" placeholder="Password">
+
+        <button class="loginbtn" onclick="login()">
+            Sign In
+        </button>
+    </div>
+
+    <!-- APP -->
+    <div id="app" class="hidden">
+
+        <!-- TIMER -->
+        <div class="card">
+
+            <div class="topbar">
+                <h2>🔥 Pomodoro Pro Max</h2>
+
+                <button class="toggle" onclick="toggleSound()">
+                    🔊 Sound
+                </button>
+            </div>
+
+            <div class="timer" id="timer">
+                25:00
+            </div>
+
+            <div class="btns">
+                <button class="start" onclick="start()">Start</button>
+
+                <button class="pause" onclick="pauseTimer()">Pause</button>
+
+                <button class="reset" onclick="reset()">Reset</button>
+            </div>
+
+            <button class="logout" onclick="logout()">
+                Sign Out
+            </button>
+
+        </div>
+
+        <!-- TASKS -->
+        <div class="card">
+
+            <h3>📋 Tasks</h3>
+
+            <input id="task" placeholder="Enter Task">
+
+            <button class="taskbtn" onclick="addTask()">
+                Add Task
+            </button>
+
+            <ul id="list"></ul>
+
+        </div>
+
+        <!-- PROGRESS -->
+        <div class="card">
+
+            <h3>📊 Progress</h3>
+
+            <p>
+                Completed Sessions:
+                <span id="count">0</span>
+            </p>
+
+            <p>
+                Focus Hours:
+                <span id="hours">0</span>
+            </p>
+
+            <div class="barbg">
+                <div class="bar" id="bar"></div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
